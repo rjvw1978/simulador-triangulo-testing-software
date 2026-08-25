@@ -1,0 +1,150 @@
+:root {
+  --bg-color: #f0f8ff;
+  --card-bg: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --cyan-primary: #0284c7;
+  --cyan-light: #e0f2fe;
+  --cyan-accent: #38bdf8;
+  --border-color: #bae6fd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: var(--cyan-primary);
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: var(--text-secondary);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.canvas-card, .controls-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls-card {
+  align-items: stretch;
+}
+
+.controls-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--cyan-primary);
+}
+
+.preset-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: var(--cyan-light);
+  color: var(--cyan-primary);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--cyan-primary);
+  color: #fff;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--border-color);
+  margin-bottom: 15px;
+}
+
+.slider-group {
+  margin-bottom: 15px;
+}
+
+.slider-group label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--cyan-primary);
+  cursor: pointer;
+}
+
+.diagnosis {
+  margin-top: 10px;
+  background-color: var(--cyan-light);
+  border-left: 4px solid var(--cyan-primary);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.diagnosis h3 {
+  font-size: 0.95rem;
+  color: var(--cyan-primary);
+  margin-bottom: 4px;
+}
+
+.diagnosis p {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
